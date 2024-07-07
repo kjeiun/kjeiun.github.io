@@ -5,7 +5,7 @@ title: 'WakeUpFromNightmare'
 date: 2016-02-20 15:56:00
 categories: development design
 tags: OpenGL C++ Horror Game
-featured_image: '/img/posts/wakeupfromnightmare.png'
+featured_image: '/img/posts/horrorgame.gif'
 project_link: 'https://www.youtube.com/watch?v=UUUXFGNmL_c'
 button_text: 'Demo Video'
 button_icon: ''
