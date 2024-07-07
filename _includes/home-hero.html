@@ -8,14 +8,16 @@
 
         <div class="hero-content">
 
+          {% if site.image_url != '' %}
+          <div class="text-center">
+            <img src="{{ site.image_url }}" alt="Site Image" class="img-responsive" style="display: block; margin: 0 auto; width: 25%; height: auto;">
+          </div>
+          {% endif %}
+          
+
           {% if site.title != '' %}
           <h1 class="text-center">{{site.title}}</h1>
           {% endif %}
-          {% if site.image_url != '' %}
-<div class="text-center">
-  <img src="{{ site.image_url }}" alt="Site Image" class="img-responsive" style="display: block; margin: 0 auto; width: 25%; height: auto;">
-</div>
-{% endif %}
 
           {% if site.description != '' or site.enable_contact == true %}
           <p class="text-center">
