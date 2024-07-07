@@ -9,5 +9,5 @@ featured_image: '/img/posts/horrorgame.gif'
 project_link: 'https://www.youtube.com/watch?v=UUUXFGNmL_c'
 button_text: 'Demo Video'
 button_icon: ''
-lead_text: 'Horror Game, escaping horror room after finding 3 keys!'
+lead_text: 'Horror Game, escaping horror room after finding 3 keys! '
 ---
