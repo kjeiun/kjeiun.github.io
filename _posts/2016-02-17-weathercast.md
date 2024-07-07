@@ -1,13 +1,13 @@
 ---
 layout: inner
 position: left
-title: 'RGB-SLAM'
+title: 'RGB-SLAM with Depth Estimation'
 date: 2016-02-20 15:56:00
 categories: development
-tags: JavaScript AngularJS API Sass
-featured_image: '/img/posts/02_weathercast-1130x864-2x.png'
-project_link: 'http://github.com/jamigibbs/weathercast'
+tags: SLAM Visual-SLAM Monocular
+featured_image: '/img/posts/rgbslam.png'
+project_link: ''
 button_icon: 'github'
-button_text: 'Visit Project'
-lead_text: ''
+lead_text: 'Joined this project as a visiting scholar at Purdue. Worked on dense, visual SLAM(Simultaneous Localization and Mapping). We changed the model architecture of
+RGB-D visual SLAM into RGB visual SLAM which does not require the Depth data anymore.'
 ---
