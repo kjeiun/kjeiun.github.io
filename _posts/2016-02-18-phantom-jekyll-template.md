@@ -7,7 +7,7 @@ categories: development design
 tags: Jekyll Sass Bootstrap
 featured_image: '/img/posts/04_phantom-jekyll-1130x864-2x.png'
 project_link: 'https://meetable.site/'
-button_icon: 'flask'
+button_icon: 'calender'
 button_text: 'Visit Meetable'
 lead_text: "A website for making an appointment among many people and having their own calender"
 ---
