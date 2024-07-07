@@ -17,10 +17,11 @@ title: "Hello. I'm Jueun Kim."
 email: 'jueunkim111@gmail.com'
 description: "I'm an Artificial Intelligence researcher ."
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://kjeiun.github.io/phantom" # the base hostname & protocol for your site, e.g. https://example.com
+url: "https://kjeiun.github.io" # the base hostname & protocol for your site, e.g. https://example.com
 # twitter_username: 'jgibbsami'
 github_username: 'kjeiun'
-cv: 'blog.jamigibbs.com'
+cv_username: ''
+mail_username:'jueunkim111@gmail.com'
 
 # Build settings
 markdown: kramdown

@@ -27,14 +27,14 @@
 
           <div class="hero-buttons">
 
-            {% if site.cv_username != '' %}
-              <a href="https://twitter.com/{{ site.twitter_username }}"><button class="btn btn-default btn-lg"></i>CV</button></a>
+            {% if site.mail_username != '' %}
+              <a href="mailto:{{ site.cv_username }}"><button class="btn btn-default btn-lg"><i class="fa fa-envelope fa-lg"></i>Email</button></a>
             {% endif %}
             {% if site.github_username != '' %}
-              <a href="https://github.com/{{ site.github_username }}"><button class="btn btn-default btn-lg"><i class="fa fa-envelope fa-lg"></i>Github</button></a>
+              <a href="https://github.com/{{ site.github_username }}"><button class="btn btn-default btn-lg"><i class="fa fa-github fa-lg"></i>Github</button></a>
             {% endif %}
-            {% if site.medium_username != '' %}
-              <a href="https://{{ site.medium_username }}"><button class="btn btn-default btn-lg"><i class="fa fa-medium fa-lg"></i>Medium</button></a>
+            {% if site.cv_username != '' %}
+              <a href="data/Jueun_CV.pdf"><button class="btn btn-default btn-lg"><i class="fa fa-file fa-lg"></i>CV</button></a>
             {% endif %}
 
           </div>
