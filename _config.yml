@@ -17,9 +17,7 @@ title: "Jueun Kim"
 image_url: "img/profile_kje.JPG"
 email: 'jueunkim111@gmail.com'
 description: "I'm an undergraduate student in Yonsei University majoring in Computer Science.
-Currently, I'm working as an intern advised by Prof. Youngwoon Lee.
-
- My research interests lie both in 3D reconstruction and Reinforcement Learning.
+ My research interests lie both in 3D reconstruction and 3D Vision Based Robotics.
 
 "
 baseurl: "" # the subpath of your site, e.g. /blog
