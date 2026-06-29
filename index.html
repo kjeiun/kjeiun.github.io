@@ -2,514 +2,386 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Jueun Kim | Computer Science student interested in 3D reconstruction and vision-based robotics.">
-  <meta property="og:title" content="Jueun Kim">
-  <meta property="og:description" content="Computer Science student interested in 3D reconstruction and vision-based robotics.">
   <meta property="og:image" content="./img/profile_kje.JPG">
+  <meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Jueun Kim</title>
   <link rel="shortcut icon" type="image/png" href="./img/favicon.png">
-  <link href="https://fonts.googleapis.com/css?family=Titillium+Web:400,600,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web:400,600" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400&amp;display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --text: #1f2937;
-      --muted: #5f6b7a;
-      --line: #e5e7eb;
-      --link: #1772d0;
-      --link-hover: #125fa3;
-      --panel: #ffffff;
-      --soft: #f8fafc;
-      --accent: #eef6ff;
-      --shadow: 0 20px 50px rgba(15, 23, 42, 0.08);
-      --max-width: 920px;
-    }
+  <script src="scramble.js"></script>
+  <style type="text/css">
+    /* Design Credits: Jon Barron, Abhishek Kar, Saurabh Gupta, and Unnat Jain */
 
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      margin: 0;
+    body, td, th {
       font-family: "Titillium Web", Helvetica, sans-serif;
-      color: var(--text);
-      background:
-        radial-gradient(circle at top left, rgba(23, 114, 208, 0.08), transparent 28%),
-        linear-gradient(180deg, #ffffff 0%, #f9fbfe 100%);
       font-size: 1rem;
-      line-height: 1.65;
+      font-weight: 400;
     }
 
     a {
-      color: var(--link);
+      color: #1772d0;
       text-decoration: none;
     }
 
-    a:hover,
-    a:focus {
-      color: var(--link-hover);
+    a:focus, a:hover {
+      color: #125fa3;
     }
 
-    img,
-    video {
-      display: block;
-      max-width: 100%;
+    .heading {
+      font-size: 1.1875rem;
+      font-weight: 600;
     }
 
-    .page {
-      width: min(var(--max-width), calc(100% - 32px));
-      margin: 0 auto;
-      padding: 40px 0 72px;
+    .section-heading {
+      font-size: 1.375rem;
+      font-weight: 600;
     }
 
-    .hero {
-      display: grid;
-      grid-template-columns: minmax(0, 1.9fr) minmax(220px, 0.9fr);
-      gap: 28px;
-      align-items: center;
+    .strong {
+      font-weight: 600;
     }
 
-    h1 {
-      margin: 0 0 8px;
-      font-size: clamp(2.25rem, 5vw, 3.4rem);
-      line-height: 1.05;
-      font-weight: 700;
-      letter-spacing: -0.04em;
+    .strong-red {
+      color: #b91c1c;
+      font-weight: 600;
+    }
+
+    .news-table td {
+      font-size: 1rem;
+      font-weight: 400;
+    }
+
+    .highlight {
+      font-weight: 600;
     }
 
     .name-ko {
       font-family: "Noto Sans KR", sans-serif;
-      font-size: clamp(1rem, 2vw, 1.25rem);
+      font-size: 1.25rem;
       font-weight: 300;
-      color: #556070;
-      margin-left: 0.4rem;
+      color: #555;
+      margin-left: 0.4em;
+      letter-spacing: -0.03em;
+      vertical-align: baseline;
     }
 
-    .hero-card,
-    .section {
-      background: var(--panel);
-      border: 1px solid rgba(229, 231, 235, 0.85);
-      border-radius: 24px;
-      box-shadow: var(--shadow);
+    .pub-image {
+      position: relative;
     }
 
-    .hero-card {
-      padding: 28px 30px;
+    .pub-image img,
+    .pub-image video {
+      transition: opacity 0.2s;
     }
 
-    .hero-card p {
-      margin: 0 0 14px;
-      color: var(--muted);
+    .pub-row:hover .pub-image img,
+    .pub-row:hover .pub-image video {
+      opacity: 0.9;
     }
 
-    .hero-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px 16px;
-      margin-top: 18px;
-      font-weight: 600;
+    .pub-row.highlighted-pub td {
+      background: #fff7e6;
     }
 
-    .profile-wrap {
-      padding: 12px;
-      background: linear-gradient(180deg, #ffffff 0%, #f3f7fb 100%);
-      border-radius: 28px;
-      border: 1px solid rgba(229, 231, 235, 0.85);
-      box-shadow: var(--shadow);
+    pre {
+      background: #f8f8f8;
+      border: 1px solid #e0e0e0;
+      border-radius: 4px;
+      padding: 10px 14px;
+      font-size: 0.8rem;
+      line-height: 1.5;
+      white-space: pre-wrap;
+      word-break: break-word;
+      margin-top: 6px;
     }
 
-    .profile-wrap img {
-      width: 100%;
-      border-radius: 20px;
-      aspect-ratio: 0.88;
-      object-fit: cover;
-      object-position: center top;
-    }
-
-    .section {
-      margin-top: 24px;
-      padding: 24px 26px;
-    }
-
-    .section h2 {
-      margin: 0 0 14px;
-      font-size: 1.6rem;
-      line-height: 1.15;
-    }
-
-    .section-intro {
-      margin: 0 0 18px;
-      color: var(--muted);
-    }
-
-    .timeline,
-    .news-list,
-    .award-list {
-      display: grid;
-      gap: 14px;
-    }
-
-    .timeline-item,
-    .news-item,
-    .award-item {
-      display: grid;
-      grid-template-columns: 140px minmax(0, 1fr);
-      gap: 16px;
-      padding: 14px 0;
-      border-top: 1px solid var(--line);
-    }
-
-    .timeline-item:first-child,
-    .news-item:first-child,
-    .award-item:first-child {
-      border-top: 0;
-      padding-top: 0;
-    }
-
-    .date,
-    .label {
-      font-weight: 600;
-      color: #334155;
-    }
-
-    .meta {
-      color: var(--muted);
-    }
-
-    .edu-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 14px;
-    }
-
-    .edu-card {
-      padding: 18px 18px 16px;
-      background: var(--soft);
-      border: 1px solid var(--line);
-      border-radius: 18px;
-    }
-
-    .edu-card strong {
-      display: block;
-      margin-bottom: 4px;
-      font-size: 1.05rem;
-    }
-
-    .project-table {
-      width: 100%;
-      border-collapse: separate;
-      border-spacing: 0 18px;
-    }
-
-    .project-table td {
-      vertical-align: top;
-    }
-
-    .project-media {
-      width: 34%;
-      padding-right: 20px;
-    }
-
-    .project-media img {
-      width: 100%;
-      border-radius: 18px;
-      border: 1px solid var(--line);
-      background: #fff;
-    }
-
-    .project-copy {
-      width: 66%;
-    }
-
-    .project-title {
-      font-size: 1.15rem;
-      font-weight: 700;
-    }
-
-    .project-copy p {
-      margin: 8px 0 10px;
-      color: var(--muted);
-    }
-
-    .tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-top: 10px;
-    }
-
-    .tag {
-      padding: 4px 10px;
-      background: var(--accent);
-      border-radius: 999px;
-      font-size: 0.9rem;
-      color: #315f90;
-    }
-
-    .coursework {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 14px;
-    }
-
-    .course-card {
-      padding: 18px;
-      border: 1px solid var(--line);
-      border-radius: 18px;
-      background: #fff;
-    }
-
-    .course-card strong {
-      display: block;
-      margin-bottom: 8px;
-    }
-
-    footer {
-      margin-top: 28px;
-      text-align: right;
-      color: var(--muted);
-      font-size: 0.95rem;
-    }
-
-    @media (max-width: 820px) {
-      .page {
-        width: min(var(--max-width), calc(100% - 20px));
-        padding-top: 20px;
+    @media (max-width: 900px) {
+      body {
+        margin: 0 8px;
       }
 
-      .hero {
-        grid-template-columns: 1fr;
-      }
-
-      .hero-card {
-        order: 2;
-      }
-
-      .profile-wrap {
-        order: 1;
-        max-width: 320px;
-        margin: 0 auto;
-      }
-
-      .timeline-item,
-      .news-item,
-      .award-item,
-      .project-table,
-      .project-table tbody,
-      .project-table tr,
-      .project-table td {
-        display: block;
-        width: 100%;
-      }
-
-      .project-media {
-        padding: 0 0 14px;
-      }
-
-      .edu-grid,
-      .coursework {
-        grid-template-columns: 1fr;
+      table[width="900"] {
+        width: 100% !important;
       }
     }
   </style>
+  <script type="text/javascript" src="js/hidebib.js"></script>
 </head>
+
 <body>
-  <main class="page">
-    <section class="hero">
-      <div class="hero-card">
-        <h1>Jueun Kim<span class="name-ko" lang="ko">김주은</span></h1>
-        <p>
-          I am a B.S. student in Computer Science at Yonsei University, with a double major in Mathematics.
-          My research interests are in 3D reconstruction, visual SLAM, and vision-based robotics.
+  <table width="900" border="0" align="center" cellspacing="0" cellpadding="0">
+    <tr>
+      <td halign="center">
+        <p align="center">
+          <font size="6">Jueun Kim</font><span class="name-ko" lang="ko">김주은</span>
         </p>
-        <p>
-          I have worked as a research intern at KAIST AI and Yonsei AI, and as a visiting scholar at Purdue University
-          on 3D visual implicit RGB-SLAM.
-        </p>
-        <div class="hero-links">
-          <a href="mailto:jueunkim111@gmail.com">Email</a>
-          <a href="https://github.com/kjeiun" target="_blank" rel="noreferrer">GitHub</a>
-          <a href="./CV_0629.pdf" target="_blank" rel="noreferrer">CV</a>
-        </div>
-      </div>
-      <div class="profile-wrap">
-        <img src="./img/profile_kje.JPG" alt="Portrait of Jueun Kim">
-      </div>
-    </section>
+      </td>
+    </tr>
 
-    <section class="section">
-      <h2>Education</h2>
-      <div class="edu-grid">
-        <article class="edu-card">
-          <strong>Yonsei University</strong>
-          <div>B.S. in Computer Science</div>
-          <div>Double Major in Mathematics</div>
-          <div class="meta">March 2021 - Present</div>
-          <div class="meta">Cumulative(Major) GPA: 4.07(4.1)/4.3</div>
-        </article>
-        <article class="edu-card">
-          <strong>Research Focus</strong>
-          <div>3D reconstruction</div>
-          <div>Visual SLAM</div>
-          <div>3D vision-based robotics</div>
-          <div class="meta">Computer vision and embodied perception</div>
-        </article>
-      </div>
-    </section>
-
-    <section class="section">
-      <h2>Experience</h2>
-      <div class="timeline">
-        <div class="timeline-item">
-          <div class="date">Jun 2025 - Present</div>
-          <div>
-            <strong>Research Intern</strong><br>
-            <span class="meta">KAIST AI, advised by Prof. Chulhee Yun</span>
-          </div>
-        </div>
-        <div class="timeline-item">
-          <div class="date">Jul 2024 - Aug 2024</div>
-          <div>
-            <strong>Research Intern</strong><br>
-            <span class="meta">Yonsei AI, advised by Prof. Youngwoon Lee</span>
-          </div>
-        </div>
-        <div class="timeline-item">
-          <div class="date">Jun 2023 - Sep 2023</div>
-          <div>
-            <strong>Research Intern</strong><br>
-            <span class="meta">KAIST AI, advised by Prof. Eunho Yang</span><br>
-            <span class="meta">Worked on 3D video generation using 2D stable diffusion and neural implicit reconstruction.</span>
-          </div>
-        </div>
-        <div class="timeline-item">
-          <div class="date">Dec 2023 - Feb 2024</div>
-          <div>
-            <strong>Visiting Scholar</strong><br>
-            <span class="meta">Purdue University</span><br>
-            <span class="meta">Research on 3D visual implicit RGB-SLAM.</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <h2>News</h2>
-      <div class="news-list">
-        <div class="news-item">
-          <div class="label">2025</div>
-          <div class="meta">Started a research internship at KAIST AI.</div>
-        </div>
-        <div class="news-item">
-          <div class="label">2024</div>
-          <div class="meta">Visited Purdue University for RGB-SLAM research and built Meetable and WakeUpFromNightmare.</div>
-        </div>
-        <div class="news-item">
-          <div class="label">2023</div>
-          <div class="meta">Worked on 3D video generation research at KAIST AI.</div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <h2>Selected Projects</h2>
-      <p class="section-intro">
-        A few projects spanning front-end engineering, interactive graphics, and 3D vision research.
-      </p>
-      <table class="project-table">
-        <tbody>
+    <tr>
+      <td>
+        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="0">
           <tr>
-            <td class="project-media">
-              <img src="./img/posts/meetable_page.png" alt="Meetable project screenshot">
-            </td>
-            <td class="project-copy">
-              <a class="project-title" href="https://meetable.site/" target="_blank" rel="noreferrer">Meetable</a><br>
-              <span><strong>Front Engineer</strong></span>
-              <p>Developed a website for scheduling appointments among many people and managing a personal calendar.</p>
-              <a href="https://meetable.site/" target="_blank" rel="noreferrer">Visit site</a>
-              <div class="tags">
-                <span class="tag">React</span>
-                <span class="tag">JavaScript</span>
-                <span class="tag">CSS</span>
+            <td width="70%" valign="middle">
+              I am an M.S. student in Artificial Intelligence at <a href="https://gsai.kaist.ac.kr/" target="_blank">KAIST AI</a>, advised by Prof. <a href="https://sites.google.com/view/chulheeyun" target="_blank">Chulhee Yun</a>.
+              My recent research focuses on <strong>optimization</strong>, <strong>loss landscapes</strong>, and their connections to stable training dynamics.
+              <br><br>
+              Previously, I received my B.S. in Computer Science from <a href="https://www.yonsei.ac.kr/" target="_blank">Yonsei University</a> with a double major in Mathematics, and worked on 3D world models, RGB-SLAM, and 3D video generation through research internships at KAIST AI, Yonsei AI, and Purdue University.
+              <br><br>
+              <b>Email</b>:
+              <div id="email" style="display:inline;">
+                <noscript><i>Please enable Javascript to view</i></noscript>
               </div>
+              <br><br>
+              <a href="https://github.com/kjeiun" target="_blank">Github</a> |
+              <a href="./CV_0629.pdf" target="_blank">CV</a>
+            </td>
+            <td width="3%" valign="top"></td>
+            <td width="27%" valign="top">
+              <img src="./img/profile_kje.JPG" style="width: 100%; height: auto; object-fit: cover;" alt="Jueun Kim portrait">
             </td>
           </tr>
+        </table>
+        <br>
+
+        <table align="center">
           <tr>
-            <td class="project-media">
-              <img src="./img/posts/horrorgame.gif" alt="WakeUpFromNightmare gameplay">
-            </td>
-            <td class="project-copy">
-              <a class="project-title" href="https://www.youtube.com/watch?v=UUUXFGNmL_c" target="_blank" rel="noreferrer">WakeUpFromNightmare</a>
-              <p>OpenGL-based horror game where the player escapes a locked room after finding three keys.</p>
-              <a href="https://www.youtube.com/watch?v=UUUXFGNmL_c" target="_blank" rel="noreferrer">Demo video</a>
-              <div class="tags">
-                <span class="tag">OpenGL</span>
-                <span class="tag">C++</span>
-                <span class="tag">Game Development</span>
-              </div>
-            </td>
+            <td width="33%" align="center"><font size="3"><span class="strong">Yonsei University</span></font></td>
+            <td width="33%" align="center"><font size="3"><span class="strong">KAIST AI</span></font></td>
+            <td width="33%" align="center"><font size="3"><span class="strong">Purdue University</span></font></td>
           </tr>
           <tr>
-            <td class="project-media">
-              <img src="./img/posts/rgbslam.gif" alt="RGB-SLAM visualization">
-            </td>
-            <td class="project-copy">
-              <span class="project-title">RGB-SLAM with Depth Estimation</span>
-              <p>Worked on dense visual SLAM and modified an RGB-D SLAM pipeline into RGB-only visual SLAM without requiring depth input.</p>
-              <div class="tags">
-                <span class="tag">Python</span>
-                <span class="tag">PyTorch</span>
-                <span class="tag">SLAM</span>
-                <span class="tag">3D Vision</span>
-              </div>
+            <td width="33%" align="center"><font size="2">B.S. in CS, Math<br>2021-2026</font></td>
+            <td width="33%" align="center"><font size="2">M.S. in AI<br>2026-</font></td>
+            <td width="33%" align="center"><font size="2">Visiting Scholar<br>2023-2024</font></td>
+          </tr>
+        </table>
+        <br>
+
+        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td>
+              <h2 style="font-size: 1.375rem; font-weight: 600;">News</h2>
             </td>
           </tr>
-        </tbody>
-      </table>
-    </section>
+        </table>
 
-    <section class="section">
-      <h2>Awards &amp; Honors</h2>
-      <div class="award-list">
-        <div class="award-item">
-          <div class="label">2024-1</div>
-          <div class="meta">Highest Honor (Top 1%), Yonsei University</div>
-        </div>
-        <div class="award-item">
-          <div class="label">2023-2</div>
-          <div class="meta">Honor (Top 10%), Yonsei University</div>
-        </div>
-        <div class="award-item">
-          <div class="label">2022-1</div>
-          <div class="meta">Great Honor (Top 3%), Yonsei University</div>
-        </div>
-        <div class="award-item">
-          <div class="label">2022-2025</div>
-          <div class="meta">Merit-based Scholarship, Yonsei University</div>
-        </div>
-      </div>
-    </section>
+        <table class="news-table" width="100%" align="center" border="0" style="text-align: justify">
+          <colgroup>
+            <col width="15%">
+            <col width="85%">
+          </colgroup>
+          <tbody>
+            <tr>
+              <td valign="top" align="center"><strong>Mar 2026</strong></td>
+              <td>Started M.S. in Artificial Intelligence at KAIST AI, advised by Prof. Chulhee Yun.</td>
+            </tr>
+            <tr>
+              <td valign="top" align="center"><strong>Jun 2026</strong></td>
+              <td>Our paper <span class="highlight">AMUSE: Anytime Muon with Stable Gradient Evaluation</span> appeared at HiLD at ICML 2026.</td>
+            </tr>
+            <tr>
+              <td valign="top" align="center"><strong>Feb 2026</strong></td>
+              <td>Completed my KAIST AI research internship on edge of stability, loss landscapes, and optimization.</td>
+            </tr>
+          </tbody>
+        </table>
 
-    <section class="section">
-      <h2>Coursework &amp; Skills</h2>
-      <div class="coursework">
-        <article class="course-card">
-          <strong>Relevant Coursework</strong>
-          <div>Computer Vision, Machine Learning, Deep Learning, Reinforcement Learning</div>
-          <div>Linear Algebra, Natural Language Processing, Mathematical Problems in Deep Learning</div>
-          <div>Software Engineering, Operating Systems, Computer Graphics, Architecture</div>
-        </article>
-        <article class="course-card">
-          <strong>Technical Skills</strong>
-          <div>Languages: Python, C/C++, SQL, JavaScript, HTML/CSS</div>
-          <div>Frameworks: PyTorch, TensorFlow, React, OpenGL</div>
-        </article>
-      </div>
-    </section>
+        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="0" style="margin-top: 12px;">
+          <tr>
+            <td width="100%" valign="middle">
+              <h2 style="font-size: 1.375rem; font-weight: 600;">Selected Research</h2>
+            </td>
+          </tr>
+        </table>
 
-    <footer>
-      Template adapted from <a href="https://hjhyunjinkim.github.io/" target="_blank" rel="noreferrer">hjhyunjinkim.github.io</a>.
-    </footer>
-  </main>
+        My work spans optimization and 3D vision. I am interested in understanding stable training behavior in modern optimizers, while also building visual systems for 3D perception, reconstruction, and robot interaction.
+        <br><br>
+
+        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+          <tr class="pub-row highlighted-pub paper">
+            <td width="35%">
+              <div class="pub-image">
+                <img src="./img/posts/rgbslam.gif" alt="AMUSE placeholder visual" width="100%" style="border-style: none">
+              </div>
+            </td>
+            <td valign="top" width="65%">
+              <span class="heading">AMUSE: Anytime Muon with Stable Gradient Evaluation</span><br>
+              <strong>Jueun Kim</strong>, Baekrok Shin, Jihun Yun, Beomhan Baek, Minhak Song, Chulhee Yun<br>
+              <em>HiLD at ICML</em>, 2026<br>
+              <a href="javascript:togglebib('bib_amuse')">bibtex</a>
+              <div id="bib_amuse"><pre style="display:none">@inproceedings{kim2026amuse,
+  title={AMUSE: Anytime Muon with Stable Gradient Evaluation},
+  author={Kim, Jueun and Shin, Baekrok and Yun, Jihun and Baek, Beomhan and Song, Minhak and Yun, Chulhee},
+  booktitle={High-dimensional Learning Dynamics Workshop at ICML},
+  year={2026}
+}</pre></div>
+            </td>
+          </tr>
+
+          <tr class="pub-row">
+            <td width="35%">
+              <div class="pub-image">
+                <img src="./img/posts/rgbslam.gif" alt="RGB-SLAM with Depth Estimation" width="100%" style="border-style: none">
+              </div>
+            </td>
+            <td valign="top" width="65%">
+              <span class="heading">RGB-SLAM with Depth Estimation</span><br>
+              <strong>Jueun Kim</strong><br>
+              <em>Research Project, Purdue University</em>, 2023-2024<br>
+              Worked on dense visual SLAM and modified the RGB-D model architecture into RGB visual SLAM, removing the requirement for depth data.
+            </td>
+          </tr>
+
+          <tr class="pub-row">
+            <td width="35%">
+              <div class="pub-image">
+                <img src="./img/posts/meetable_page.png" alt="Meetable" width="100%" style="border-style: none">
+              </div>
+            </td>
+            <td valign="top" width="65%">
+              <a href="https://meetable.site/" target="_blank"><span class="heading">Meetable</span></a><br>
+              <strong>Jueun Kim</strong><br>
+              <em>Frontend Project</em>, 2023-2024<br>
+              Developed a website for making appointments among many people and managing a personal calendar.
+              <br>
+              <a href="https://meetable.site/" target="_blank">Project Page</a>
+            </td>
+          </tr>
+
+          <tr class="pub-row">
+            <td width="35%">
+              <div class="pub-image">
+                <img src="./img/posts/horrorgame.gif" alt="WakeUpFromNightmare" width="100%" style="border-style: none">
+              </div>
+            </td>
+            <td valign="top" width="65%">
+              <a href="https://www.youtube.com/watch?v=UUUXFGNmL_c" target="_blank"><span class="heading">WakeUpFromNightmare</span></a><br>
+              <strong>Jueun Kim</strong><br>
+              <em>OpenGL Project</em>, 2024<br>
+              OpenGL-based horror game where the player must escape a locked room after finding three keys.
+              <br>
+              <a href="https://www.youtube.com/watch?v=UUUXFGNmL_c" target="_blank">Demo Video</a>
+            </td>
+          </tr>
+
+          <tr class="pub-row">
+            <td width="35%">
+              <div class="pub-image">
+                <img src="./img/posts/wakeupfromnightmare.png" alt="3D Conditioned Relighting" width="100%" style="border-style: none">
+              </div>
+            </td>
+            <td valign="top" width="65%">
+              <span class="heading">3D Conditioned Relighting</span><br>
+              <strong>Jueun Kim</strong><br>
+              <em>Research Project</em>, 2023<br>
+              Combined S3-NeRF and SDPS-Net for a single-view multi-light relighting task under unknown lighting conditions and participated in YAICON.
+            </td>
+          </tr>
+        </table>
+
+        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="100%" valign="middle">
+              <h2 style="font-size: 1.375rem; font-weight: 600;">Education</h2>
+            </td>
+          </tr>
+        </table>
+
+        <table class="news-table" width="100%" align="center" border="0" style="text-align: justify">
+          <colgroup>
+            <col width="20%">
+            <col width="80%">
+          </colgroup>
+          <tbody>
+            <tr>
+              <td valign="top" align="center"><strong>KAIST AI</strong></td>
+              <td>M.S. in Artificial Intelligence, advised by Prof. Chulhee Yun.<br>Seoul, Republic of Korea | March 2026 - Present</td>
+            </tr>
+            <tr>
+              <td valign="top" align="center"><strong>Yonsei</strong></td>
+              <td>B.S. in Computer Science, Double Major in Mathematics.<br>Seoul, Republic of Korea | March 2021 - February 2026 | GPA(Major): 4.09(4.12)/4.3, 3rd/62 in Major</td>
+            </tr>
+          </tbody>
+        </table>
+        <br>
+
+        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="100%" valign="middle">
+              <h2 style="font-size: 1.375rem; font-weight: 600;">Experience &amp; Honors</h2>
+            </td>
+          </tr>
+        </table>
+
+        <table class="news-table" width="100%" align="center" border="0" style="text-align: justify">
+          <colgroup>
+            <col width="20%">
+            <col width="80%">
+          </colgroup>
+          <tbody>
+            <tr>
+              <td valign="top" align="center"><strong>Experience</strong></td>
+              <td>
+                <strong>Research Intern</strong>, KAIST AI, June 2025 - February 2026<br>
+                Edge of Stability, Loss landscape, Optimization.
+                <br><br>
+                <strong>Research Intern</strong>, Yonsei AI, July 2024 - August 2024<br>
+                3D World Model for Robot Manipulation.
+                <br><br>
+                <strong>Research Intern</strong>, KAIST AI, June 2023 - September 2023<br>
+                3D video generation with 2D Stable Diffusion and neural implicit reconstruction models.
+                <br><br>
+                <strong>Visiting Scholar</strong>, Purdue University, December 2023 - February 2024<br>
+                3D visual implicit RGB-SLAM.
+              </td>
+            </tr>
+            <tr>
+              <td valign="top" align="center"><strong>Honors</strong></td>
+              <td>
+                Great Honor (Top 3%), Yonsei University, 2025-1<br>
+                Highest Honor (Top 1%), Yonsei University, 2024-1<br>
+                Honor (Top 10%), Yonsei University, 2023-2<br>
+                Great Honor (Top 3%), Yonsei University, 2022-1<br>
+                Merit-based Scholarship, Yonsei University
+              </td>
+            </tr>
+            <tr>
+              <td valign="top" align="center"><strong>Skills</strong></td>
+              <td>
+                <strong>Languages</strong>: Python, C/C++, SQL (Postgres), JavaScript, HTML/CSS<br>
+                <strong>Frameworks</strong>: OpenGL, React, PyTorch, TensorFlow<br>
+                <strong>Coursework</strong>: Deep Learning, Computer Vision, Machine Learning, Reinforcement Learning, NLP, Computer Graphics
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <br>
+
+        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="0">
+          <tbody>
+            <tr>
+              <td>
+                <br>
+                <p align="right">
+                  <font size="2">
+                    Template based on <a href="https://hjhyunjinkim.github.io/" target="_blank">hjhyunjinkim.github.io</a>.
+                  </font>
+                </p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </td>
+    </tr>
+  </table>
 </body>
+<script>
+  emailScramble = new scrambledString(
+      document.getElementById('email'),
+      'emailScramble',
+      'jueunkim@kaist.ac.kr',
+      [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]);
+</script>
 </html>
